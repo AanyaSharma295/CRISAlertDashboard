@@ -34,7 +34,7 @@ public class AlertDAO {
     }
 
     // This method connects to DB and returns a Connection object
-    private static Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USERNAME, PASSWORD);
     }
 
