@@ -6,12 +6,14 @@ service\EmailService$1.class
 service\EmailService.class
 servlet\PopupServlet.class
 dao\PreferenceDAO.class
+dao\AdminDAO.class
 service\AlertScheduler.class
 servlet\LoginServlet.class
 servlet\PreferenceServlet.class
 service\AppContextListener.class
 dao\UserDAO.class
 servlet\NotificationServlet.class
+servlet\AdminServlet.class
 dao\NotificationDAO.class
 servlet\AlertServlet.class
 model\User.class
