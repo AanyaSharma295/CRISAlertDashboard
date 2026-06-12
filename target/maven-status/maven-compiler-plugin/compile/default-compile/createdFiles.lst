@@ -2,10 +2,14 @@ servlet\LogoutServlet.class
 dao\PopupDAO.class
 model\Alert.class
 dao\AlertDAO.class
+service\EmailService$1.class
+service\EmailService.class
 servlet\PopupServlet.class
 dao\PreferenceDAO.class
+service\AlertScheduler.class
 servlet\LoginServlet.class
 servlet\PreferenceServlet.class
+service\AppContextListener.class
 dao\UserDAO.class
 servlet\NotificationServlet.class
 dao\NotificationDAO.class
