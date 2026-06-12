@@ -88,4 +88,28 @@ public class AlertDAO {
         }
         return 0;
     }
+
+    public static Alert getAlertById(int alertId) {
+    String sql = "SELECT * FROM ALERT_MASTER WHERE ALERT_ID = ?";
+    try (
+        Connection con = getConnection();
+        PreparedStatement ps = con.prepareStatement(sql);
+    ) {
+        ps.setInt(1, alertId);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            Alert alert = new Alert();
+            alert.setAlertId(rs.getInt("ALERT_ID"));
+            alert.setAlertTitle(rs.getString("ALERT_TITLE"));
+            alert.setCardName(rs.getString("CARD_NAME"));
+            alert.setCountQuery(rs.getString("COUNT_QUERY"));
+            alert.setDetailQuery(rs.getString("DETAIL_QUERY"));
+            alert.setIsActive(rs.getString("IS_ACTIVE"));
+            return alert;
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return null;
+}
 }
