@@ -109,16 +109,19 @@
     <div class="header">
         <h1>TDMS Alert Dashboard</h1>
         <div class="nav-bar">
-            <%
-                User loggedUser = (User) request.getAttribute("loggedUser");
-                if (loggedUser != null) {
-            %>
-                <span>Welcome, <%= loggedUser.getFullName() %></span>
-                <a href="preferences">My Alerts</a>
-                <a href="notifications">Notifications</a>
-                <a href="logout">Logout</a>
-            <% } %>
-        </div>
+    <%
+        User loggedUser = (User) request.getAttribute("loggedUser");
+        if (loggedUser != null) {
+    %>
+        <span>Welcome, <%= loggedUser.getFullName() %></span>
+        <a href="preferences">My Alerts</a>
+        <a href="notifications">Notifications</a>
+        <% if ("ADMIN".equals(loggedUser.getRole())) { %>
+            <a href="admin">Admin Panel</a>
+        <% } %>
+        <a href="logout">Logout</a>
+    <% } %>
+</div>
     </div>
 
     <div class="dashboard">
