@@ -1,0 +1,3 @@
+model\Alert.class
+dao\AlertDAO.class
+main\java\servlet\AlertServlet.class
