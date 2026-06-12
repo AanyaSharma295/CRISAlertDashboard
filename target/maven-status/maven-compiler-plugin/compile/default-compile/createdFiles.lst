@@ -1,8 +1,11 @@
+servlet\LogoutServlet.class
 model\Alert.class
 servlet\PreferenceServlet.class
 dao\AlertDAO.class
 dao\PreferenceDAO.class
 dao\UserDAO.class
+servlet\NotificationServlet.class
+dao\NotificationDAO.class
 servlet\AlertServlet.class
 model\User.class
 servlet\LoginServlet.class

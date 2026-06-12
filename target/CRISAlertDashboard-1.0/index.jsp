@@ -9,10 +9,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<%@ page import="model.User" %>
     <div class="header">
-        <h1>TDMS Alert Dashboard</h1>
+    <h1>TDMS Alert Dashboard</h1>
+    <div>
+        <%
+            User loggedUser = (User) request.getAttribute("loggedUser");
+            if (loggedUser != null) {
+        %>
+            <span style="color:white; margin-right:20px;">
+                Welcome, <%= loggedUser.getFullName() %>
+            </span>
+            <a href="preferences" style="color:white; margin-right:15px;">
+                My Alerts
+            </a>
+            <a href="notifications" style="color:white; margin-right:15px;">
+                Notifications
+            </a>
+            <a href="logout" style="color:white;">Logout</a>
+        <% } %>
     </div>
+</div>
 
     <div class="dashboard">
         <%
