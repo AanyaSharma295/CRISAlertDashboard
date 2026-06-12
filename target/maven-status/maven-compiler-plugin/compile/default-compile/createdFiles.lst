@@ -1,5 +1,7 @@
 model\Alert.class
+servlet\PreferenceServlet.class
 dao\AlertDAO.class
+dao\PreferenceDAO.class
 dao\UserDAO.class
 servlet\AlertServlet.class
 model\User.class
